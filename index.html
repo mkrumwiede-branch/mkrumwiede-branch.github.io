@@ -29,13 +29,10 @@
         <script>
             const btn = document.querySelector('.eventBtn');
             btn.addEventListener('click', function(){
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                'customerID': 'customer-id-guid',
+               branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
                 'event': 'playVideo',
                 'videoId': 'vid-000-123',
-                'videoFormat': 'hd'
-                });
+                'videoFormat': 'hd'});
             });
 
             const btn2 = document.querySelector('.eventBtn2');
