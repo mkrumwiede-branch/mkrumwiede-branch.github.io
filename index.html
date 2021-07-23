@@ -23,7 +23,8 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
         <p>To test the Web SDK</p>
-        <button class="eventBtn">Click for event</button>
+        <button class="eventBtn">Click for event1</button>
+        <button class="event2Btn">Click for event2</button>
         <div id="videoPlayer"></div>
         <script>
             const btn = document.querySelector('.eventBtn');
@@ -33,6 +34,17 @@
                 'customerID': 'customer-id-guid',
                 'event': 'playVideo',
                 'videoId': 'vid-000-123',
+                'videoFormat': 'hd'
+                });
+            });
+
+            const btn2 = document.querySelector('.eventBtn2');
+            btn2.addEventListener('click', function(){
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                'customerID': 'customer-id-guid',
+                'event': 'playVideo',
+                'videoId': 'vid-000-345',
                 'videoFormat': 'hd'
                 });
             });
