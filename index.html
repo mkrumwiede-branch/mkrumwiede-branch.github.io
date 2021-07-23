@@ -27,6 +27,7 @@
         <script>
             const btn = document.querySelector('.eventBtn');
             btn.addEventListener('click', function(){
+                alert('event handled');
                 const myEvent = new CustomEvent('playVideo', {detail: {event:"playVideo"}});
                 btn.dispatchEvent(myEvent);
             });
