@@ -24,12 +24,13 @@
         <!-- End Google Tag Manager (noscript) -->
         <p>To test the Web SDK</p>
         <button class="eventBtn">Click for event</button>
+        <div id="videoPlayer"></div>
         <script>
             const btn = document.querySelector('.eventBtn');
             btn.addEventListener('click', function(){
                 alert('event handled');
                 const myEvent = new CustomEvent('playVideo', {detail: {event:"playVideo"}});
-                btn.dispatchEvent(myEvent);
+                videoPlayer.dispatchEvent(myEvent);
             });
         </script>
     </body>
