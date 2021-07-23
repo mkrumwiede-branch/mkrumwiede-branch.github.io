@@ -23,11 +23,13 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
         <p>To test the Web SDK</p>
-        <button class="eventBtn">Click for event</button>
+        <button class="eventBtn" onclick="">Click for event</button>
         <script>
-            const myEvent = new CustomEvent('playVideo', {detail: {event:"playVideo"}});
             const btn = document.querySelector('.eventBtn');
-            btn.dispatchEvent(myEvent);
+            btn.addEventListener('click', function(){
+                const myEvent = new CustomEvent('playVideo', {detail: {event:"playVideo"}});
+                btn.dispatchEvent(myEvent);
+            });
         </script>
     </body>
 </html>
