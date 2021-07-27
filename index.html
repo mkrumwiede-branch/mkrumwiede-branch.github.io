@@ -26,7 +26,7 @@
         <!-- End Google Tag Manager (noscript) -->
         <div class="eventContainer">
             <p>Push button for Custom Event</p>
-            <button class="eventBtn" id="customBtn">Custom Event</button>
+            <button class="eventBtn" onclick="trackCustomEvent()">Custom Event</button>
         </div>
 
         <div class="eventContainer">
@@ -46,18 +46,18 @@
 
         <div class="eventContainer">
             <p>Push button for Purchase Completed Event </p>
-            <button class="eventBtn" id="pruchaseCompletedButton">Purchase Completed</button>
+            <button class="eventBtn" id="purchaseCompletedButton">Purchase Completed</button>
         </div>
 
        
         <script>
-            const btn = document.getElementById('customBtn');
-            btn.addEventListener('click', function(){
-               branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
+
+            function trackCustomEvent(){
+                branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
                 'event': 'playVideo',
                 'videoId': 'vid-000-123',
                 'videoFormat': 'hd'});
-            });
+            }
 
             const btn2 = document.getElementById('registrationBtn');
             btn2.addEventListener('click', function(){
