@@ -1,9 +1,11 @@
 .customEventContainer {
   display: flex;
+  flex-direction: column;
 }
 
 .registrationEventContainer {
     display: flex;
+    flex-direction: column;
 }
 
 .customBtn {
