@@ -91,7 +91,7 @@
             }
 
             function trackAddToCartEvent(){
-                //need to change to add to cart event
+                //need to change to add better data after seeing structure of returned data
                 var customer_event_data = {
                     'description': 'high value item view',
                     'customerType': 'logged-in user',
@@ -103,9 +103,9 @@
                         "$price": "59.99",
                     }
                 ];
-                var customer_alias = 'Purchased a RPG Video Game';
+                var customer_alias = 'Added FFX to cart';
 
-                branch.logEvent('PURCHASE', customer_event_data, contentItems, customer_alias);
+                branch.logEvent('ADD_TO_CART', customer_event_data, contentItems, customer_alias);
             }
 
             function trackPurchaseCompletedEvent(){
