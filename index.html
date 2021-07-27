@@ -60,11 +60,13 @@
             }
 
             function trackRegistrationEvent(){
-                //need to change to registration event
-                branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
-                'event': 'playVideo',
-                'videoId': 'vid-000-123',
-                'videoFormat': 'hd'});
+                var customer_event_data = {
+                    'customerUserId': '6161654116431654',
+                }
+
+                var customer_alias = "registered for subscription";
+
+                branch.logEvent('COMPLETE_REGISTRATION', customer_event_data, customer_alias);
             }
 
             function trackViewItemEvent(){
