@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Matt Krumwiede Test Site</title>
+        <link href='stylesheet.css' rel='stylesheet'>
         <script>
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
@@ -23,11 +25,15 @@
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
         <p>To test the Web SDK</p>
-        <button class="eventBtn">Click for event1</button>
+        <div class="customEventContainer">
+            <p>Push button for Custom Event</p>
+            <button class="customBtn">custom event</button>
+        </div>
+       
         <button class="eventBtn2">Click for event2</button>
         <div id="videoPlayer"></div>
         <script>
-            const btn = document.querySelector('.eventBtn');
+            const btn = document.querySelector('.customBtn');
             btn.addEventListener('click', function(){
                branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
                 'event': 'playVideo',
@@ -48,3 +54,4 @@
         </script>
     </body>
 </html>
+

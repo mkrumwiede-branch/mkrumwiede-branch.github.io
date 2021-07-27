@@ -1,0 +1,4 @@
+.customEventContainer {
+  display: flex;
+  flex-direction: column;
+}
