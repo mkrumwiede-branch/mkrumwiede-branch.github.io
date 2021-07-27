@@ -1,11 +1,6 @@
-.customEventContainer {
+.eventContainer {
   display: flex;
   flex-direction: column;
-}
-
-.registrationEventContainer {
-    display: flex;
-    flex-direction: column;
 }
 
 .customBtn {
@@ -13,5 +8,9 @@
 }
 
 .registrationBtn {
+    width: fit-content;
+}
+
+.viewItemBtn {
     width: fit-content;
 }
