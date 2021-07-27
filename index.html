@@ -26,12 +26,12 @@
         <!-- End Google Tag Manager (noscript) -->
         <div class="eventContainer">
             <p>Push button for Custom Event</p>
-            <button class="customBtn">Custom Event</button>
+            <button class="eventBtn" id="customBtn">Custom Event</button>
         </div>
 
         <div class="eventContainer">
             <p>Push button for Complete Registration Event </p>
-            <button class="registrationBtn">Complete Registration</button>
+            <button class="registrationBtn" id="registrationBtn">Complete Registration</button>
         </div>
 
         <div class="eventContainer">
@@ -51,7 +51,7 @@
 
        
         <script>
-            const btn = document.querySelector('.customBtn');
+            const btn = document.getElementById('customBtn');
             btn.addEventListener('click', function(){
                branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
                 'event': 'playVideo',
@@ -59,7 +59,7 @@
                 'videoFormat': 'hd'});
             });
 
-            const btn2 = document.querySelector('.registrationBtn');
+            const btn2 = document.getElementById('registrationBtn');
             btn2.addEventListener('click', function(){
                 window.dataLayer = window.dataLayer || [];
                 window.dataLayer.push({

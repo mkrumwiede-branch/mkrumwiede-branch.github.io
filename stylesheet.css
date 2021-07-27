@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.eventButton {
+    width: fit-content;
+}
+
 .customBtn {
     width: fit-content;
 }
