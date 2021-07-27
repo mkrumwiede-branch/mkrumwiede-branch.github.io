@@ -29,9 +29,12 @@
             <p>Push button for Custom Event</p>
             <button class="customBtn">custom event</button>
         </div>
+
+        <div class="registrationEventContainer">
+            <p>Push button for Complete Registration Event </p>
+            <button class="registrationBtn">Complete Registration</button>
+        </div>
        
-        <button class="eventBtn2">Click for event2</button>
-        <div id="videoPlayer"></div>
         <script>
             const btn = document.querySelector('.customBtn');
             btn.addEventListener('click', function(){
@@ -41,7 +44,7 @@
                 'videoFormat': 'hd'});
             });
 
-            const btn2 = document.querySelector('.eventBtn2');
+            const btn2 = document.querySelector('.registrationBtn');
             btn2.addEventListener('click', function(){
                 window.dataLayer = window.dataLayer || [];
                 window.dataLayer.push({
