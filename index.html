@@ -71,10 +71,27 @@
 
             function trackViewItemEvent(){
                 //need to change to view item event
-                branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
-                'event': 'playVideo',
-                'videoId': 'vid-000-123',
-                'videoFormat': 'hd'});
+                var customer_event_data = {
+                    'description': 'high value item view',
+                    'customerType': 'logged-in user',
+                };
+                var contentItems = [
+                    {
+                        "$og_title": "Final Fantasy X",
+                        "$og_description": "JRPG Video Game with turn based combat that explores fantasy world",
+                        "$price": "59.99",
+                        "$product_category": "RPG/Action games",
+                    },
+                    {
+                        "$og_title": "Final Fantasy VII Remake",
+                        "$og_description": "Highly acclaimed JRPG from the Final Fantasy series",
+                        "$price": "59.99",
+                        "$product_category": "RPG/Action games",
+                    }
+                ];
+                var customer_alias = 'Viewed list of RPG games';
+
+                branch.logEvent('VIEW_ITEMS', customer_event_data, contentItems, customer_alias);
             }
 
             function trackAddToCartEvent(){
