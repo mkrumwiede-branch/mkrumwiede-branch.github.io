@@ -31,22 +31,22 @@
 
         <div class="eventContainer">
             <p>Push button for Complete Registration Event </p>
-            <button class="eventBtn" id="registrationBtn">Complete Registration</button>
+            <button class="eventBtn" onclick="trackRegistrationEvent()">Complete Registration</button>
         </div>
 
         <div class="eventContainer">
             <p>Push button for View Item Event </p>
-            <button class="eventBtn" id="viewItemBtn">View Item</button>
+            <button class="eventBtn" onclick="trackViewItemEvent()">View Item</button>
         </div>
 
         <div class="eventContainer">
             <p>Push button for Add to Cart Event</p>
-            <button class="eventBtn" id="addToCartButton">Add to cart</button>
+            <button class="eventBtn" onclick="trackAddToCartEvent()">Add to cart</button>
         </div>
 
         <div class="eventContainer">
             <p>Push button for Purchase Completed Event </p>
-            <button class="eventBtn" id="purchaseCompletedButton">Purchase Completed</button>
+            <button class="eventBtn" onclick="trackPurchaseCompletedEvent()">Purchase Completed</button>
         </div>
 
        
@@ -59,16 +59,37 @@
                 'videoFormat': 'hd'});
             }
 
-            const btn2 = document.getElementById('registrationBtn');
-            btn2.addEventListener('click', function(){
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                'customerID': 'customer-id-guid',
+            function trackRegistrationEvent(){
+                //need to change to registration event
+                branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
                 'event': 'playVideo',
-                'videoId': 'vid-000-345',
-                'videoFormat': 'hd'
-                });
-            });
+                'videoId': 'vid-000-123',
+                'videoFormat': 'hd'});
+            }
+
+            function trackViewItemEvent(){
+                //need to change to view item event
+                branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
+                'event': 'playVideo',
+                'videoId': 'vid-000-123',
+                'videoFormat': 'hd'});
+            }
+
+            function trackAddToCartEvent(){
+                //need to change to add to cart event
+                branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
+                'event': 'playVideo',
+                'videoId': 'vid-000-123',
+                'videoFormat': 'hd'});
+            }
+
+            function trackPurchaseCompletedEvent(){
+                //need to change to purchase completed event
+                branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
+                'event': 'playVideo',
+                'videoId': 'vid-000-123',
+                'videoFormat': 'hd'});
+            }
         </script>
     </body>
 </html>
