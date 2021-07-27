@@ -63,7 +63,6 @@
                 var customer_event_data = {
                     'customerUserId': '6161654116431654',
                 }
-
                 var customer_alias = "registered for subscription";
 
                 branch.logEvent('COMPLETE_REGISTRATION', customer_event_data, [], customer_alias);
@@ -93,10 +92,20 @@
 
             function trackAddToCartEvent(){
                 //need to change to add to cart event
-                branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
-                'event': 'playVideo',
-                'videoId': 'vid-000-123',
-                'videoFormat': 'hd'});
+                var customer_event_data = {
+                    'description': 'high value item view',
+                    'customerType': 'logged-in user',
+                };
+                var contentItems = [
+                    {
+                        "$og_title": "Final Fantasy X",
+                        "$og_description": "JRPG Video Game with turn based combat that explores fantasy world",
+                        "$price": "59.99",
+                    }
+                ];
+                var customer_alias = 'Purchased a RPG Video Game';
+
+                branch.logEvent('PURCHASE', customer_event_data, contentItems, customer_alias);
             }
 
             function trackPurchaseCompletedEvent(){
