@@ -52,7 +52,7 @@
 
          <div class="eventContainer">
             <p>Click to logout Branch User's id </p>
-            <button class="eventBtn" onclick="()=>{branch.logout()}">Purchase Completed</button>
+            <button class="eventBtn" onclick="logoutUser()">Logout User</button>
         </div>
 
         <script>
@@ -141,6 +141,10 @@
                 var customer_alias = 'Purchased FFX to cart';
 
                 branch.logEvent('PURCHASE', customer_event_data, contentItems, customer_alias);
+            }
+
+            function logoutUser(){
+                branch.logout();
             }
         </script>
     </body>
