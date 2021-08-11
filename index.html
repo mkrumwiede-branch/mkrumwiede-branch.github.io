@@ -55,6 +55,11 @@
             <button class="eventBtn" onclick="logoutUser()">Logout User</button>
         </div>
 
+        <div class="eventContainer">
+            <p>Click to logout Branch User's id </p>
+            <button class="eventBtn" onclick="loginUser()">Login User</button>
+        </div>
+
         <script>
 
             function trackCustomEvent(){
@@ -145,6 +150,10 @@
 
             function logoutUser(){
                 branch.logout();
+            }
+
+            function loginUser(){
+                branch.setIdentity("userId-1234-abcd");
             }
         </script>
     </body>
