@@ -5,13 +5,12 @@
         <link href='stylesheet.css' rel='stylesheet'>
         <link href="android-app://com.eneff.branch.example.android/matttestapp/">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
+        <!-- <script>
             // load Branch
             (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode autoAppIndex banner closeBanner closeJourney creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode trackCommerceEvent logEvent disableTracking".split(" "), 0);
             // init Branch
             branch.init('key_live_lj2BphMeOtpGF31Y1z38qbhlwCg59A2H');
-          </script>
-
+          </script> -->
         <h1>Welcome to the test site</h1>
         <meta name="branch:deeplink:Monster_name" content="Matt"/>
         <meta name="branch:deeplink:Monster_description" content="Creative and contagiously happy, Matt has boundless energy and an appetite for learning about new things. He is vivacious and popular, and is always ready for the next adventure."/>
@@ -63,10 +62,10 @@
         <script>
 
             function trackCustomEvent(){
-                branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
-                'event': 'playVideo',
-                'videoId': 'vid-000-123',
-                'videoFormat': 'hd'});
+                // branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
+                // 'event': 'playVideo',
+                // 'videoId': 'vid-000-123',
+                // 'videoFormat': 'hd'});
             }
 
             function trackRegistrationEvent(){
@@ -75,7 +74,7 @@
                 }
                 var customer_alias = "registered for subscription";
 
-                branch.logEvent('COMPLETE_REGISTRATION', customer_event_data, [], customer_alias);
+                // branch.logEvent('COMPLETE_REGISTRATION', customer_event_data, [], customer_alias);
             }
 
             function trackViewItemEvent(){
@@ -97,7 +96,7 @@
                 ];
                 var customer_alias = 'Viewed list of RPG games';
 
-                branch.logEvent('VIEW_ITEMS', customer_event_data, contentItems, customer_alias);
+                // branch.logEvent('VIEW_ITEMS', customer_event_data, contentItems, customer_alias);
             }
 
             function trackAddToCartEvent(){
@@ -121,7 +120,7 @@
                 ];
                 var customer_alias = 'Added FFX to cart';
 
-                branch.logEvent('ADD_TO_CART', customer_event_data, contentItems, customer_alias);
+                // branch.logEvent('ADD_TO_CART', customer_event_data, contentItems, customer_alias);
             }
 
             function trackPurchaseCompletedEvent(){
@@ -145,15 +144,15 @@
                 ];
                 var customer_alias = 'Purchased FFX to cart';
 
-                branch.logEvent('PURCHASE', customer_event_data, contentItems, customer_alias);
+                // branch.logEvent('PURCHASE', customer_event_data, contentItems, customer_alias);
             }
 
             function logoutUser(){
-                branch.logout();
+                // branch.logout();
             }
 
             function loginUser(){
-                branch.setIdentity("userId-1234-abcd");
+                // branch.setIdentity("userId-1234-abcd");
             }
         </script>
     </body>
