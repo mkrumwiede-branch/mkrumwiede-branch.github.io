@@ -24,6 +24,22 @@
         </div>
 
         <a href="https://matttestapp.app.link/blueMonster1" class="link">Click to download the app</a>
-       
+
+        <div class="eventContainer">
+            <p>Push button for Custom Event</p>
+            <button class="eventBtn" onclick="trackCustomEvent()">Custom Event</button>
+        </div>
+
+
+        <script>
+
+            function trackCustomEvent(){
+                // branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
+                // 'event': 'playVideo',
+                // 'videoId': 'vid-000-123',
+                // 'videoFormat': 'hd'});
+                branch.track('pageview');
+            }
+        </script>
     </body>
 </html>
