@@ -54,15 +54,17 @@
                 // 'videoId': 'vid-000-123',
                 // 'videoFormat': 'hd'});
                 //branch.track('pageview');
+               
+
+                branch.closeJourney();
+
                 branch.setBranchViewData({data: {'AT-GEAT-1875': 'control'}}, function(err) {
                     console.log("data set");
                 });
 
-                branch.closeJourney(function(err, data){
-                    console.log(err, data);
-                    console.log("journey closed");
-                    branch.track('pageview');
-                });
+                setTimeout(function () {
+                    branch.track("pageview");
+                }, 500)
               
                 
             }
