@@ -36,8 +36,17 @@
             <button class="eventBtn" onclick="trackCustomEvent()">Custom Event</button>
         </div>
 
+        <div class="eventContainer">
+            <p>Push button to reshow the journey</p>
+            <button class="eventBtn" onclick="reshowJourney()">Reshow Journey</button>
+        </div>
+
 
         <script>
+
+            function reshowJourney(){
+                branch.track('pageview');
+            }
 
             function trackCustomEvent(){
                 // branch.logEvent('custom_event', {'customerID': 'customer-id-guid',
@@ -45,9 +54,9 @@
                 // 'videoId': 'vid-000-123',
                 // 'videoFormat': 'hd'});
                 //branch.track('pageview');
-                branch.closeJourney(function (err){ branch.setBranchViewData({data: {'AT-GEAT-1875': 'control'}});
-                branch.track('pageview'); });
-               
+                branch.closeJourney();
+                branch.setBranchViewData({data: {'AT-GEAT-1875': 'control'}});
+                branch.track('pageview');
             }
         </script>
     </body>
