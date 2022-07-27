@@ -58,7 +58,8 @@
                     console.log("data set");
                 });
 
-                branch.closeJourney(function(err){
+                branch.closeJourney(function(err, data){
+                    console.log(err, data);
                     console.log("journey closed");
                     branch.track('pageview');
                 });
