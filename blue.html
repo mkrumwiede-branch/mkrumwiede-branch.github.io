@@ -58,13 +58,13 @@
 
                 branch.closeJourney();
 
-                branch.setBranchViewData({data: {'AT-GEAT-1875': 'control'}}, function(err) {
+                branch.setBranchViewData({tags: ['AT-GEAT-1875', 'control']}, function(err) {
                     console.log("data set");
                 });
 
                 setTimeout(function () {
                     branch.track("pageview");
-                }, 100)
+                }, 500)
               
                 
             }
