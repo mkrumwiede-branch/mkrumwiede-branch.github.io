@@ -56,11 +56,11 @@
                 //branch.track('pageview');
                 branch.setBranchViewData({data: {'AT-GEAT-1875': 'control'}}, function(err) {
                     console.log("data set");
-                    branch.track('pageview');
                 });
 
                 branch.closeJourney(function(err){
                     console.log("journey closed");
+                    branch.track('pageview');
                 });
               
                 
