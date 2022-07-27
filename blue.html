@@ -54,9 +54,15 @@
                 // 'videoId': 'vid-000-123',
                 // 'videoFormat': 'hd'});
                 //branch.track('pageview');
-                await branch.closeJourney();
-                branch.setBranchViewData({data: {'AT-GEAT-1875': 'control'}});
-                branch.track('pageview');
+                branch.closeJourney(function(err){
+                    console.log("journey closed");
+                });
+                branch.setBranchViewData({data: {'AT-GEAT-1875': 'control'}}, function(err) {
+                    console.log("data set");
+                });
+                branch.track('pageview', function(err){
+                    console.log("pageview tracked");
+                });
             }
         </script>
     </body>
