@@ -56,7 +56,9 @@
                 //branch.track('pageview');
             
 
-                branch.track('pageview', {'delay': '30', 'testing': '123'});     
+                setTimout( function() {
+                    branch.track('pageview', {'delay': '30', 'testing': '123'}
+                }, 500); 
                 
             }
         </script>
