@@ -58,14 +58,7 @@
 
                 branch.closeJourney();
 
-                branch.setBranchViewData({tags: ['AT-GEAT-1875', 'control']}, function(err) {
-                    console.log("data set");
-                });
-
-                setTimeout(function () {
-                    branch.track("pageview");
-                }, 500)
-              
+                branch.track('pageview', {'delay': '10'});     
                 
             }
         </script>
