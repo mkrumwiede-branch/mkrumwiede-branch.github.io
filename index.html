@@ -55,7 +55,7 @@
         </div>
 
         <div class="eventContainer">
-            <p>Click to logout Branch User's id </p>
+            <p>Click to login with a Branch User's id </p>
             <button class="eventBtn" onclick="loginUser()">Login User</button>
         </div>
 
@@ -154,6 +154,9 @@
 
             function loginUser(){
                 // branch.setIdentity("userId-1234-abcd");
+                branch.data(function(err, data){
+                    console.log(data);
+                })
             }
         </script>
     </body>
