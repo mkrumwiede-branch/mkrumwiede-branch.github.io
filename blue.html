@@ -55,11 +55,7 @@
                 // 'videoFormat': 'hd'});
                 //branch.track('pageview');
             
-
-                setTimout( function() {
-                    branch.track('pageview', {'delay': '30', 'testing': '123'});
-                }, 500); 
-                
+                branch.setBranchViewData({data: {'journeys_campaign': 'Test Campaign' }});
             }
         </script>
     </body>
