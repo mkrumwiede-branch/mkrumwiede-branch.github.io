@@ -54,8 +54,18 @@
                 // 'videoId': 'vid-000-123',
                 // 'videoFormat': 'hd'});
                 //branch.track('pageview');
-            
-                branch.setBranchViewData({data: {'channel': 'test channel'}});
+                var lang_code;
+                if (navigator.languages && navigator.languages.length>0) { 
+                    lang_code = navigator.languages[0]; 
+                } 
+                else if (navigator.language) { lang_code = navigator.language; } 
+
+            // Change Journeys text if language is Spanish (ES) 
+                if (lang_code == 'es') { 
+                    branch.setBranchViewData( { data: { "$journeys_title": 'Mi App',    
+                    "$journeys_description": 'Mi descripción', "$journeys_button_get_has_app": 
+                    'Abrir', "$journeys_button_get_no_app": 'Ver', } } ); 
+                }
             }
         </script>
     </body>
