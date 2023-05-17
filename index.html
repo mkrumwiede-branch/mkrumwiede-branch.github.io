@@ -205,7 +205,13 @@
             }
 
             function logoutUser(){
-                branch.logout();
+                var listener = function(event, data) { console.log(event, data); }
+
+                // Specify an event to listen for
+                branch.addListener('didShowJourney', listener);
+
+                // Listen for all events
+                branch.addListener(listener);
             }
 
             function loginUser(){
