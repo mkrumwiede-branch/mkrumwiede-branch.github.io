@@ -38,7 +38,7 @@
 
 .fab-container{
 
-  position:absolute;
+  position:sticky;
   
   bottom:50px;
   
